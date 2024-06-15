@@ -1,0 +1,34 @@
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes changeColor {
+    from{
+        background-color:red;
+    }to{
+        background-color:blue;
+        }
+}
+
+.container-giratorio{
+    background-color: rgb(255, 0, 0);
+    
+    margin-left:150px;
+    margin-top: 300px;
+    display: inline-block;
+    animation: rotate .2s linear infinite;
+
+}
+
+.container-giratorio:hover {
+    animation: rotate 0s linear infinite;
+    width: 1450px;
+    height: 400px;
+    font-size: 300px;
+    animation: changeColor 2s linear infinite;
+    }
+
