@@ -1,4 +1,4 @@
-@keyframes rotate{
+/* @keyframes rotate{
     from{
         transform: rotate(0deg);
     }to{
@@ -26,9 +26,16 @@
 
 .container-giratorio:hover {
     animation: rotate 0s linear infinite;
-    width: 1450px;
-    height: 400px;
-    font-size: 300px;
     animation: changeColor 2s linear infinite;
     }
 
+.animated-field{
+    animation: changeColor 2s linear infinite;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    color: aliceblue;
+    width: auto;
+    font-size: 54px;
+    height: auto;
+
+} */
