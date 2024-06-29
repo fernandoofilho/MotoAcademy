@@ -1,0 +1,15 @@
+.text-part-one{
+    text-transform: uppercase;
+    color: red;
+    font-size: 100px larger;
+}
+
+.text-part-two{
+    text-transform: lowercase;
+    color: blue;
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    border: 1px solid green;
+}

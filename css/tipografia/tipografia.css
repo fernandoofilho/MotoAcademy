@@ -1,0 +1,15 @@
+.paragrafo {
+  background-color: bisque;
+  color: red;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+span {
+  font-size: 60px;
+  color:  #b29dd9;
+  background-size: 400% 400%;
+  animation: 3s  ease infinite;
+}
