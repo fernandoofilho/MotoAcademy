@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <style>
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        .row.content {
+            height: 1500px;
+
+        }
+    </style>
+    <!-- container fluid  pega toda a tela  -->
+    <div class="container-fluid">
+        <!-- no bootstrap da pra definir linhas e colunas só pelo nome da classe      -->
+        <div v class="row content">
+            <!-- coluna de 3 pontos (dos 12 disponiveis) -->
+            <div class="col-sm-3 sidenav">
+                <h4>Fernando Blog</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#section1">Home</a></li>
+                    <li><a href="#section2">Friends</a></li>
+                    <li><a href="#section3">Family</a></li>
+                    <li><a href="#section4">Photos</a></li>
+                </ul><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Pesquisar</button>
+                    </span>
+                </div>
+            </div>
+            <!-- post  -->
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>I love food!</h2>
+                <h5>
+                     <span class="glyphicon glyphicon-time"></span> Post by Fernando, 5 de julho de 2024
+                </h5>
+                <h5>
+                    <span class="label label-danger">FOOD</span> 
+                    <span class="label label-primary"> Ipsum</span>
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, possimus similique laudantium,
+                    dolores enim voluptatibus voluptatem corrupti eum a ut, dignissimos nostrum eaque dolorem vitae 
+                    voluptas nam atque recusandae deleniti. 
+                </p>
+            </div>
+            <!-- post -->
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>OFFICIALLY BLOGGING!</h2>
+                <h5>
+                     <span class="glyphicon glyphicon-time"></span> Post by Fernando, 5 de julho de 2024
+                </h5>
+                <h5>
+                    <span class="label label-success"> Ipsum</span>
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, possimus similique laudantium,
+                    dolores enim voluptatibus voluptatem corrupti eum a ut, dignissimos nostrum eaque dolorem vitae 
+                    voluptas nam atque recusandae deleniti. 
+                </p>
+            </div>
+            <hr>
+            <!-- comentario? -->
+            <div class="col-sm-9">
+                <h4>Leave a comment</h4>
+                <form role="form">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            </div>
+
+            <div class="col-sm-9">
+            <br>
+            <br>
+                <p>
+                    <span class="badge">2</span>
+                    Coments
+                </p>    
+
+                <!-- comentarios postados  -->
+                <div class="row">
+                     <!-- fotos  -->
+                    <div class="col-sm-2 text-center">
+                        <img 
+                        src="data:image/jpeg;base64,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" 
+                        alt="avatar" class="img-circle" height="65" width="65">
+                    </div>
+                    <!-- conteudo  -->
+                    <div class="col-sm-10">
+                        <h4>Jurubeba <small>2024, July 5</small></h4>
+                        <p>SEXTOOOU PAPAI!!</p>
+                    </div>
+                </div>
+                 <div class="row">
+                     <!-- fotos  -->
+                    <div class="col-sm-2 text-center">
+                        <img 
+                        src="https://www.jornaloeste.com.br/imgsite/noticias/amp-006-CACHORRO.jpg" 
+                        alt="avatar" class="img-circle" height="65" width="65">
+                    </div>
+                    <!-- conteudo  -->
+                    <div class="col-sm-10">
+                        <h4>JACINTA <small>2024, July 5</small></h4>
+                        <p>SEXTOOOU SIIM!!</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
