@@ -121,3 +121,4 @@ const print = (word) => console.log(word)
 const exibir = (word) => console.log(word)
 
 print("hello")
+
