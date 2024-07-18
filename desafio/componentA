@@ -1,0 +1,15 @@
+const times = [
+    {
+        time: "Vasco da Gama!!!!",
+        titulo: "Campeão da Série B"
+    },
+    {
+        time: "Santos",
+        titulo: "Pelé"
+    },
+    {
+        time: "Flamengo",
+        titulo: "Cheirinho"
+    }
+]
+module.exports = times
