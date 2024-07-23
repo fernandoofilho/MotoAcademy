@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box { 
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: relative;
+            border-radius: 50%; /* Para fazer o box ser um círculo */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("box-button").addEventListener("click", () => {
+                const box = document.getElementById("box");
+                let angle = 0; 
+                const radius = 100;  
+                const centerX = 150;  
+                const centerY = 150;  
+                const speed = 0.1;  
+
+                const interval = setInterval(frame, 10);
+                box.style.width = '100px'
+                box.style.height = '100px'
+                let size = 100;
+
+                function frame() {
+
+                    const x = centerX + radius * Math.cos(angle);
+                    const y = centerY + radius * Math.sin(angle);
+                    let op = '-';
+                    box.style.left = x + 'px';
+                    box.style.top = y + 'px';
+                    
+                    angle += speed;
+                    
+                    size = op === '-' ? size -1 :  size + 1;
+                    if (size === 100){ 
+                    op = '-'
+                    }
+                    if (size === -100){
+                        op = '+'
+                    }
+                    box.style.width = ((size)**2)**(1/2) + 'px';
+                    console.log(size)
+
+                    if (angle >= 2 * Math.PI) {
+                        angle = 0; 
+ 
+                    }
+                }
+
+                setTimeout(() => {
+                    clearInterval(interval);
+                }, 5000); 
+            });
+        });
+    </script>
+
+    <div id="box"></div>
+
+    <button id="box-button">Faça a caixa se mexer!</button>
+</body>
+</html>
