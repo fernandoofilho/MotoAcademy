@@ -1,6 +1,9 @@
-function getUsers(req, res){
+const usersService = require('../services/userService')
+
+async function getUsers(req, res){
     try {
-        res.status(200).send({message: "Hello World"})
+        const users = await usersService.getAllUsers()
+        return res.status(200).json(users)
     } catch (error) {
         
     }
