@@ -14,4 +14,17 @@ async function createUser(nome, idade, email, senha) {
     const [results] = await conn.execute(sqlCreate, values);
     return results;
 }
-module.exports = { getAllUsers, createUser };
+
+async function update(id, nome) {
+  const conn = await mysql2.createConnection(config);
+  const sqlUpdate = "UPDATE aluno SET `nome` = ? WHERE `id` = ?";
+  const values = [nome, id];
+  const [results] = await conn.execute(sqlUpdate, values);
+}
+
+async function deleteUserService(id) {
+    const conn = await mysql2.createConnection(config);
+    const sqlDelete = "DELETE FROM aluno WHERE `id` = ?"
+    const [results] = await conn.execute(sqlDelete, [id]);
+}
+module.exports = { getAllUsers, createUser, update, deleteUserService };
