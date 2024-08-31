@@ -23,7 +23,19 @@ async function uploadFile(file) {
   return { filename: file.originalname, path: filePath };
 }
 
-
+async function getImage(id) {
+  const conn = await mysql.createConnection(config);
+  
+  const [results] = await conn.execute("SELECT * FROM `images` WHERE `id`=?", [
+    id,
+  ]);
+  
+  if (results.length > 0) {
+    const image = results[0];
+    const fileContent = await fs.readFile(image.path);
+    return { content: fileContent, filename: image.filename };
+  }
+}
 
 async function update(id, fileName) {
   const conn = await mysql2.createConnection(config);
@@ -37,4 +49,4 @@ async function deleteFileService(id) {
   const sqlDelete = "DELETE FROM images WHERE `id` = ?";
   const [results] = await conn.execute(sqlDelete, [id]);
 }
-module.exports = { getAllFiles, uploadFile, update, deleteFileService };
+module.exports = { getAllFiles, uploadFile, update, deleteFileService, getImage };

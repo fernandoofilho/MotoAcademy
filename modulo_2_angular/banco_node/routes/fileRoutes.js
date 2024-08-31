@@ -6,8 +6,8 @@ const router = express.Router();
 const upload = multer();
 
 router.get("/files/:id", fileController.getFiles);
+router.get("/files/download/:id", fileController.GetFile);
 router.post("/files/upload", upload.single("image"), fileController.createFile);
 router.put("/files/:id", fileController.updateFile);
 router.delete("/files/:id", fileController.deleteFile);
-
 module.exports = router;
